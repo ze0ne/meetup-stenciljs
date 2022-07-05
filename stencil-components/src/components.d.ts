@@ -20,6 +20,46 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface YouButtons {
+        "text": string;
+        "type": string;
+    }
+    interface YouCardJob {
+        "contractType": string;
+        "location": string;
+        "name": string;
+    }
+    interface YouCardMedia {
+        "author": string;
+        "image": string;
+        "summary": string;
+        "title": string;
+        "url": string;
+    }
+    interface YouDropdown {
+        "label": string;
+        "links": any;
+    }
+    interface YouFooter {
+    }
+    interface YouHeader {
+    }
+    interface YouLogo {
+        "type": string;
+        "width": string;
+    }
+    interface YouNews {
+    }
+    interface YouProfile {
+        "image": string;
+        "job": string;
+        "name": string;
+    }
+    interface YouProfilePicture {
+        "image": string;
+    }
+    interface YouTypography {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +68,85 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLYouButtonsElement extends Components.YouButtons, HTMLStencilElement {
+    }
+    var HTMLYouButtonsElement: {
+        prototype: HTMLYouButtonsElement;
+        new (): HTMLYouButtonsElement;
+    };
+    interface HTMLYouCardJobElement extends Components.YouCardJob, HTMLStencilElement {
+    }
+    var HTMLYouCardJobElement: {
+        prototype: HTMLYouCardJobElement;
+        new (): HTMLYouCardJobElement;
+    };
+    interface HTMLYouCardMediaElement extends Components.YouCardMedia, HTMLStencilElement {
+    }
+    var HTMLYouCardMediaElement: {
+        prototype: HTMLYouCardMediaElement;
+        new (): HTMLYouCardMediaElement;
+    };
+    interface HTMLYouDropdownElement extends Components.YouDropdown, HTMLStencilElement {
+    }
+    var HTMLYouDropdownElement: {
+        prototype: HTMLYouDropdownElement;
+        new (): HTMLYouDropdownElement;
+    };
+    interface HTMLYouFooterElement extends Components.YouFooter, HTMLStencilElement {
+    }
+    var HTMLYouFooterElement: {
+        prototype: HTMLYouFooterElement;
+        new (): HTMLYouFooterElement;
+    };
+    interface HTMLYouHeaderElement extends Components.YouHeader, HTMLStencilElement {
+    }
+    var HTMLYouHeaderElement: {
+        prototype: HTMLYouHeaderElement;
+        new (): HTMLYouHeaderElement;
+    };
+    interface HTMLYouLogoElement extends Components.YouLogo, HTMLStencilElement {
+    }
+    var HTMLYouLogoElement: {
+        prototype: HTMLYouLogoElement;
+        new (): HTMLYouLogoElement;
+    };
+    interface HTMLYouNewsElement extends Components.YouNews, HTMLStencilElement {
+    }
+    var HTMLYouNewsElement: {
+        prototype: HTMLYouNewsElement;
+        new (): HTMLYouNewsElement;
+    };
+    interface HTMLYouProfileElement extends Components.YouProfile, HTMLStencilElement {
+    }
+    var HTMLYouProfileElement: {
+        prototype: HTMLYouProfileElement;
+        new (): HTMLYouProfileElement;
+    };
+    interface HTMLYouProfilePictureElement extends Components.YouProfilePicture, HTMLStencilElement {
+    }
+    var HTMLYouProfilePictureElement: {
+        prototype: HTMLYouProfilePictureElement;
+        new (): HTMLYouProfilePictureElement;
+    };
+    interface HTMLYouTypographyElement extends Components.YouTypography, HTMLStencilElement {
+    }
+    var HTMLYouTypographyElement: {
+        prototype: HTMLYouTypographyElement;
+        new (): HTMLYouTypographyElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "you-buttons": HTMLYouButtonsElement;
+        "you-card-job": HTMLYouCardJobElement;
+        "you-card-media": HTMLYouCardMediaElement;
+        "you-dropdown": HTMLYouDropdownElement;
+        "you-footer": HTMLYouFooterElement;
+        "you-header": HTMLYouHeaderElement;
+        "you-logo": HTMLYouLogoElement;
+        "you-news": HTMLYouNewsElement;
+        "you-profile": HTMLYouProfileElement;
+        "you-profile-picture": HTMLYouProfilePictureElement;
+        "you-typography": HTMLYouTypographyElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +164,59 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface YouButtons {
+        "text"?: string;
+        "type"?: string;
+    }
+    interface YouCardJob {
+        "contractType"?: string;
+        "location"?: string;
+        "name"?: string;
+    }
+    interface YouCardMedia {
+        "author"?: string;
+        "image"?: string;
+        "summary"?: string;
+        "title"?: string;
+        "url"?: string;
+    }
+    interface YouDropdown {
+        "label"?: string;
+        "links"?: any;
+    }
+    interface YouFooter {
+    }
+    interface YouHeader {
+    }
+    interface YouLogo {
+        "type"?: string;
+        "width"?: string;
+    }
+    interface YouNews {
+    }
+    interface YouProfile {
+        "image"?: string;
+        "job"?: string;
+        "name"?: string;
+    }
+    interface YouProfilePicture {
+        "image"?: string;
+    }
+    interface YouTypography {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "you-buttons": YouButtons;
+        "you-card-job": YouCardJob;
+        "you-card-media": YouCardMedia;
+        "you-dropdown": YouDropdown;
+        "you-footer": YouFooter;
+        "you-header": YouHeader;
+        "you-logo": YouLogo;
+        "you-news": YouNews;
+        "you-profile": YouProfile;
+        "you-profile-picture": YouProfilePicture;
+        "you-typography": YouTypography;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +224,17 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "you-buttons": LocalJSX.YouButtons & JSXBase.HTMLAttributes<HTMLYouButtonsElement>;
+            "you-card-job": LocalJSX.YouCardJob & JSXBase.HTMLAttributes<HTMLYouCardJobElement>;
+            "you-card-media": LocalJSX.YouCardMedia & JSXBase.HTMLAttributes<HTMLYouCardMediaElement>;
+            "you-dropdown": LocalJSX.YouDropdown & JSXBase.HTMLAttributes<HTMLYouDropdownElement>;
+            "you-footer": LocalJSX.YouFooter & JSXBase.HTMLAttributes<HTMLYouFooterElement>;
+            "you-header": LocalJSX.YouHeader & JSXBase.HTMLAttributes<HTMLYouHeaderElement>;
+            "you-logo": LocalJSX.YouLogo & JSXBase.HTMLAttributes<HTMLYouLogoElement>;
+            "you-news": LocalJSX.YouNews & JSXBase.HTMLAttributes<HTMLYouNewsElement>;
+            "you-profile": LocalJSX.YouProfile & JSXBase.HTMLAttributes<HTMLYouProfileElement>;
+            "you-profile-picture": LocalJSX.YouProfilePicture & JSXBase.HTMLAttributes<HTMLYouProfilePictureElement>;
+            "you-typography": LocalJSX.YouTypography & JSXBase.HTMLAttributes<HTMLYouTypographyElement>;
         }
     }
 }

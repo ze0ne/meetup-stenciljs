@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+.most-viewed {
+  display: flex;
+  border: solid 3px #000;
+  width: 450px;
+  border-radius: 15px;
+  flex-direction: column;
+  padding: 20px;
+  header {
+    text-align: center;
+    h2 {
+      margin: 0;
+    }
+  }
+  main {
+    ol {
+      padding-inline-start: 0 !important;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      counter-increment: item;
+      margin-bottom: 30px;
+      a {
+        color: inherit;
+        text-decoration: inherit;
+        display: inline;
+      }
+    }
+    li:before {
+      font-weight: bold;
+      color: #000;
+      content: counter(item);
+      border-radius: 100%;
+      width: 20px;
+      margin-right: 20px;
+      text-align: center;
+      display: inline-block;
+      border: solid #000 3px;
+      background-image: url('https://assets-global.website-files.com/625aea37d2019e1dd7782064/627e660e6574494ab3c1c6e5_Vector%20332.png');
+    }
+  }
+}

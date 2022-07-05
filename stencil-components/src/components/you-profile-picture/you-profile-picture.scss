@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  width: 160px;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+  img {
+    border: 2px solid #fbbe00;
+    border-radius: 500px;
+  }
+}

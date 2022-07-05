@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+.label{
+  display: flex;
+  line-height: 30px;
+  cursor: pointer;
+}
+.label::after {
+  content: "›";
+  margin-left: 5px;
+  color: #fbbe00;
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotate(90deg);
+}
+
+.dropdown:hover .content{
+  display: flex;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  display: none;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 20px;
+  padding-top: 20px;
+  position: absolute;
+  margin-left: -20px;
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+}
+
+a {
+  all: inherit;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.2s, box-shadow 0.2s, padding 0.2s, border-radius 0.2s,
+    background-color 0.2s, border-color 0.2s, border-width 0.2s;
+  &:hover {
+    background: #fbbc00af;
+  }
+}

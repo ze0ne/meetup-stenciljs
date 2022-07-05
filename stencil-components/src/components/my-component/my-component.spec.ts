@@ -11,7 +11,7 @@ describe('my-component', () => {
       <my-component>
         <mock:shadow-root>
           <div>
-            Hello, World! I'm
+            Hello, Storybook ! I'm
           </div>
         </mock:shadow-root>
       </my-component>

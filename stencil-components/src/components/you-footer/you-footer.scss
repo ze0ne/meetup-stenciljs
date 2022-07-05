@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+.footer {
+  background: #3c465f;
+  padding: 60px 40px 20px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid #fff 1px;
+}
+
+.logo {
+  margin-right: 200px;
+}
+
+.label {
+  color: rgba($color: #fff, $alpha: 0.5);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  padding-inline-start: 0;
+  font-size: 16px;
+  letter-spacing: 3.52px;
+  li {
+    padding: 5px;
+  }
+}
+
+.list {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.list ul {
+  padding-left: 10px;
+  border-left: #fbbe00 2px solid;
+}
