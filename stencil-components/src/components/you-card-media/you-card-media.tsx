@@ -10,7 +10,7 @@ export class YouCardMedia {
 
   @Prop() image: string;
 
-  @Prop() title: string;
+  @Prop() mainTitle: string;
 
   @Prop() summary: string;
 
@@ -24,7 +24,7 @@ export class YouCardMedia {
         <div class="card">
           <header><img src={this.image}/></header>
           <main>
-            <h2>{this.title}</h2>
+            <h2>{this.mainTitle}</h2>
             <div class="summary">{this.summary}</div>
           </main>
           <footer>

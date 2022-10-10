@@ -24,6 +24,9 @@ export namespace Components {
         "text": string;
         "type": string;
     }
+    interface YouCanneles {
+        "mainTitle": string;
+    }
     interface YouCardJob {
         "contractType": string;
         "location": string;
@@ -32,8 +35,8 @@ export namespace Components {
     interface YouCardMedia {
         "author": string;
         "image": string;
+        "mainTitle": string;
         "summary": string;
-        "title": string;
         "url": string;
     }
     interface YouDropdown {
@@ -61,6 +64,10 @@ export namespace Components {
     interface YouTypography {
     }
 }
+export interface YouCannelesCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLYouCannelesElement;
+}
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -73,6 +80,12 @@ declare global {
     var HTMLYouButtonsElement: {
         prototype: HTMLYouButtonsElement;
         new (): HTMLYouButtonsElement;
+    };
+    interface HTMLYouCannelesElement extends Components.YouCanneles, HTMLStencilElement {
+    }
+    var HTMLYouCannelesElement: {
+        prototype: HTMLYouCannelesElement;
+        new (): HTMLYouCannelesElement;
     };
     interface HTMLYouCardJobElement extends Components.YouCardJob, HTMLStencilElement {
     }
@@ -137,6 +150,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "you-buttons": HTMLYouButtonsElement;
+        "you-canneles": HTMLYouCannelesElement;
         "you-card-job": HTMLYouCardJobElement;
         "you-card-media": HTMLYouCardMediaElement;
         "you-dropdown": HTMLYouDropdownElement;
@@ -168,6 +182,10 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: string;
     }
+    interface YouCanneles {
+        "mainTitle"?: string;
+        "onAcceptHandler"?: (event: YouCannelesCustomEvent<any>) => void;
+    }
     interface YouCardJob {
         "contractType"?: string;
         "location"?: string;
@@ -176,8 +194,8 @@ declare namespace LocalJSX {
     interface YouCardMedia {
         "author"?: string;
         "image"?: string;
+        "mainTitle"?: string;
         "summary"?: string;
-        "title"?: string;
         "url"?: string;
     }
     interface YouDropdown {
@@ -207,6 +225,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "my-component": MyComponent;
         "you-buttons": YouButtons;
+        "you-canneles": YouCanneles;
         "you-card-job": YouCardJob;
         "you-card-media": YouCardMedia;
         "you-dropdown": YouDropdown;
@@ -225,6 +244,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "you-buttons": LocalJSX.YouButtons & JSXBase.HTMLAttributes<HTMLYouButtonsElement>;
+            "you-canneles": LocalJSX.YouCanneles & JSXBase.HTMLAttributes<HTMLYouCannelesElement>;
             "you-card-job": LocalJSX.YouCardJob & JSXBase.HTMLAttributes<HTMLYouCardJobElement>;
             "you-card-media": LocalJSX.YouCardMedia & JSXBase.HTMLAttributes<HTMLYouCardMediaElement>;
             "you-dropdown": LocalJSX.YouDropdown & JSXBase.HTMLAttributes<HTMLYouDropdownElement>;

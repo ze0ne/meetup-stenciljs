@@ -8,6 +8,13 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+      copy: [
+        {
+          src: '**/*.{jpg,png}',
+          dest: 'dist/components/assets',
+          warn: true,
+        }
+      ]
     },
     {
       type: 'dist-custom-elements',
@@ -19,6 +26,7 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
+    
   ],
   plugins: [
     sass()
