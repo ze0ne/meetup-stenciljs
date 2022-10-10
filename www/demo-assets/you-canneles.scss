@@ -1,0 +1,63 @@
+@import url(animate.scss);
+
+main {
+  width: 500px;
+  box-shadow: 0px 0px 15px -4px #000000;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 99;
+  bottom: 25px;
+  background: #fff;
+  left: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+footer {
+  width: 100%;
+  border-top: solid rgb(228, 228, 228) 1px;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-block-start: 0;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-right: solid rgb(228, 228, 228) 1px;
+      padding: 10px;
+      text-align: center;
+      flex-grow: 1;
+      flex-basis: 0;
+
+      &.link {
+        color: #fbbe00;
+        font-weight: bold;
+      }
+
+    }
+  }
+}
