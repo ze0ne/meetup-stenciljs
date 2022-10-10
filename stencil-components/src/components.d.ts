@@ -32,8 +32,8 @@ export namespace Components {
     interface YouCardMedia {
         "author": string;
         "image": string;
+        "mainTitle": string;
         "summary": string;
-        "title": string;
         "url": string;
     }
     interface YouDropdown {
@@ -176,8 +176,8 @@ declare namespace LocalJSX {
     interface YouCardMedia {
         "author"?: string;
         "image"?: string;
+        "mainTitle"?: string;
         "summary"?: string;
-        "title"?: string;
         "url"?: string;
     }
     interface YouDropdown {
